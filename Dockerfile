@@ -10,6 +10,8 @@ RUN adduser --disabled-password --gecos "Default Jupyter user" \
     --uid 1000 \
      jovyan
 
+RUN usermod -s /bin/bash jovyan
+
 # Create a venv to install packages into
 RUN python3 -m venv /opt/venv
 
